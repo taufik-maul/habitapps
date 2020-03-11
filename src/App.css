@@ -1,38 +1,105 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+#habit-app {
+  width: 70%;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+#habit-app .header {
   text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#habit-app .header img {
+  width: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#habit-app #habitForm fieldset {
+  border: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#habit-app #habitForm .fieldgroup {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#habit-app #habitForm .fieldgroup .field {
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#habit-app #habitForm .fieldgroup .field:last-child {
+  margin-right: 0;
+}
+
+input,
+select,
+button {
+  height: 40px;
+  padding: 10px 30px;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+}
+
+#root {
+  padding: 30px 0;
+  background-color: #c0c0c0;
+  height: 100vh;
+}
+
+.habit-list {
+  list-style: none;
+  margin: 30px 0 0;
+  padding: 0;
+}
+
+.habit-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  transition: all .4s;
+}
+
+.habit-list li:hover {
+  background: #FFF;
+}
+
+.habit-list li .status {
+  border: 1px solid #b8f1c0;
+  padding: 5px 15px;
+  background: #ffffff;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.habit-list li .status.berhenti {
+  background-color: #ffe0e0;
+  color: red;
+  border-color: #aa0f0f;
+}
+
+.habit-list li .status.mulai {
+  background-color: #e6ffe0;
+  color: #114727;
+  border-color: #5aaa0f;
+}
+
+.habit-list button {
+  background: none;
+  border: none;
+  padding: 0;
+  height: auto;
+  line-height: 1;
+}
+
+.habit-list button img {
+  width: 15px;
 }

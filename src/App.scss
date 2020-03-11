@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+#habit-app {
+  width: 70%;
+  padding: 15px;
+  margin: 0 auto;
+
+  .header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 0 auto;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  #habitForm {
+    fieldset {
+      border: 0;
+    }
+    .fieldgroup {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .field {
+        margin-right: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+input,
+select,
+button {
+  height: 40px;
+  padding: 10px 30px;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+
+}
+
+#root {
+  padding: 30px 0;
+  background-color: #c0c0c0;
+  height: 100vh;
+}
+
+.habit-list {
+  list-style: none;
+  margin: 30px 0 0;
+  padding: 0;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    transition: all .4s;
+
+    &:hover {
+      background: #FFF;
+    }
+
+    .status {
+      border: 1px solid #b8f1c0;
+      padding: 5px 15px;
+      background: #ffffff;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &.berhenti {
+        background-color: rgb(255, 224, 224);
+        color: red;
+        border-color: rgb(170, 15, 15);
+      }
+
+      &.mulai {
+        background-color: rgb(230, 255, 224);
+        color: rgb(17, 71, 39);
+        border-color: rgb(90, 170, 15);
+      }
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    height: auto;
+    line-height: 1;
+
+    img {
+      width: 15px;
+    }
+  }
+}
